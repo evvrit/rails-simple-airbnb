@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="cards-container">
+    <h2 style="padding-top:20px; padding-bottom: 10px">All our Flats (<%= Flat.count %>)</h2>
+    <% @flats.each do |flat| %>
+      <div class="flat-card">
+        <p class="flat-name">  <%= flat.name.capitalize %></p>
+        <p class="flat-label">  <%= flat.address %></p>
+        <span class="flat-occup"><i class="fa-solid fa-users"></i><%= flat.number_of_guests %></span>
+        <span class="flat-price"><i class="fa-solid fa-sterling-sign"></i><%= flat.price_per_night %></span>
+      </div>
+    <% end %>
+  </div>
+</div>
